@@ -1,0 +1,14 @@
+classes/
+lib/
+*.pyc
+.classpath
+.project
+*.jar
+.lein-deps-sum
+target/
+*.iml
+*.ipr
+*.iws
+.idea/
+
+
