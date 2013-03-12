@@ -193,10 +193,10 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <ftp server="61.43.139.65"
+                                <ftp server=""
                                      remotedir="/root/"
-                                     userid="root"
-                                     password="soma2065">
+                                    userid=""
+                                     password="">
                                     <fileset dir="${basedir}/target">
                                         <include name="storm-starter-0.0.1-SNAPSHOT-jar-with-dependencies.jar"/>
                                         <!--<include name="${project.build.finalName}.${packaging}"/>-->
