@@ -59,11 +59,16 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+          <groupId>storm</groupId>
+          <artifactId>libthrift7</artifactId>
+          <version>0.7.0</version>
+        </dependency>
+        <dependency>
             <groupId>storm</groupId>
             <artifactId>storm</artifactId>
             <version>0.8.2</version>
             <!-- keep storm out of the jar-with-dependencies -->
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.twitter4j</groupId>
@@ -137,7 +142,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>storm.starter.WordCountTopology</mainClass>
+                            <mainClass>storm.starter.ManualDRPCClient</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -193,10 +198,10 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <ftp server=""
+                                <ftp server="hadoop"
                                      remotedir="/root/"
-                                    userid=""
-                                     password="">
+                                    userid="root"
+                                     password="soma2065">
                                     <fileset dir="${basedir}/target">
                                         <include name="storm-starter-0.0.1-SNAPSHOT-jar-with-dependencies.jar"/>
                                         <!--<include name="${project.build.finalName}.${packaging}"/>-->
